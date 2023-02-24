@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- <div onclick="openIndexPage()">MovieApp</div> -->
+        <img onclick="openIndexPage()"
+            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
+            alt="" class="movie-img">
+        <div>
+            <button class="login-btn" onclick="showLoginModal()">Login</button>
+            <div class="auth-block">
+                <h4 class="auth-name"></h4>
+                <button onclick="openProfilePage()">Profile</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+    <div class="user-div">
+        <div class="circle">
+            <h3></h3>
+        </div>
+        <h1></h1>
+    </div>
+    <div class="tabs">
+        <div class="tab-header-block">
+            <div class="tab-header active-header">Favourites</div>
+            <div class="tab-header">Lists</div>
+        </div>
+        <div class="tab-content-block">
+            <div class="tab-content active-content">
+                <div class="favourite-block">
+
+                </div>
+            </div>
+            <div class="tab-content">
+                <h3>My Lists</h3>
+                <div class="lists-content">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/profile.js" defer></script>
+<script src="./js/index.js"></script>
+
+</html>

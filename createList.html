@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create list</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- <div onclick="openIndexPage()">MovieApp</div> -->
+        <img onclick="openIndexPage()"
+            src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
+            alt="" class="movie-img">
+        <div>
+            <button class="login-btn" onclick="showLoginModal()">Login</button>
+            <div class="auth-block">
+                <h4 class="auth-name"></h4>
+                <button onclick="openProfilePage()">Profile</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+    <div class="modal-login">
+        <form class="modal-login-content" action="#">
+            <h3>Login to your account</h3>
+            <input placeholder="Username" class="username">
+            <input placeholder="Password" class="password" type="password">
+            <p class="error-message"></p>
+            <span>In order to use the editing and rating capabilities of TMDB, as well as get personal recommendations
+                you will need to login to your account. If you do not have an account, registering for an account is
+                free and simple. <a href="https://www.themoviedb.org/signup" target="_blank">Click here</a> to get
+                started.</span>
+            <button type="submit" onclick="loginUser(this)">Login</button>
+        </form>
+    </div>
+    <div class="create-list-form">
+        <h2>Create New List</h2>
+        <label>Name</label>
+        <input placeholder="Name" class="list-name">
+        <label>Description</label>
+        <input placeholder="Description" class="list-description">
+        <button onclick="createList()" class="list-btn">Create</button>
+    </div>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/createList.js" defer></script>
+</body>
+
+</html>
